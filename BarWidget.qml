@@ -78,7 +78,7 @@ BarWidget {
   Text {
     id: frameLabel
     anchors.centerIn: parent
-    text: root.frames[root.frameIndex]
+    text: root.frames[root.frameIndex % root.frames.length]
     font.family: catFont.name
     font.pixelSize: root.catSize
     color: root.fg
