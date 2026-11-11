@@ -49,8 +49,9 @@ BarWidget {
   readonly property int frameDelay: Math.max(root.minDelayMs, Math.min(root.maxDelayMs, Math.round(1000 / (4 + root.cpu))))
 
   // Fixed slot sized to the widest pose, so the bar doesn't shift as the cat
-  // changes frames. Measured from the loaded font; falls back to the default
-  // font's metrics if Waycat.ttf is missing.
+  // changes frames. Plus a little padding each side, so the cat doesn't
+  // touch the pill edges.
+  readonly property int hPadding: 8
   function maxFrameWidth() {
     var w = 0
     var all = root.runFrames.concat(root.sleepFrames)
@@ -58,7 +59,7 @@ BarWidget {
     return Math.ceil(w)
   }
 
-  implicitWidth: root.maxFrameWidth()
+  implicitWidth: root.maxFrameWidth() + root.hPadding * 2
   implicitHeight: Math.ceil(catMetrics.height)
 
   FontLoader {
