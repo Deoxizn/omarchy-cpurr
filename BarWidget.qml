@@ -20,10 +20,10 @@ import qs.Ui
 //                           thickness, so keep this under it.
 BarWidget {
   id: root
-  moduleName: "deoxizn.cpurr"
+  moduleName: "pizza.dirty.cpurr"
 
   readonly property string home: Quickshell.env("HOME")
-  readonly property string cpuScript: home + "/.config/omarchy/plugins/deoxizn.cpurr/cpu_monitor.py"
+  readonly property string cpuScript: home + "/.config/omarchy/plugins/pizza.dirty.cpurr/cpu_monitor.py"
 
   readonly property var runFrames: ["A", "B", "C", "D", "E"]
   readonly property var sleepFrames: ["G", "H", "I", "J", "K", "L", "M", "N"]
