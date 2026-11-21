@@ -15,4 +15,4 @@ Then restart the shell and add cpurr to the bar.
 
 - `size` — how big the cat is, in px. Default `32`. Keep it under your bar thickness.
 
-Change it in the bar settings, same as other widgets.
+Set it in the cpurr layout entry in `~/.config/omarchy/shell.json` (add `"size": 32`, or your value). It is not in the bar settings menu.
